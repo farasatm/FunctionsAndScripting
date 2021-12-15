@@ -1,0 +1,63 @@
+---
+title: "FunctionsAndScripting"
+author: "Moeen Farasat"
+date: "12/15/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Leanirng how to use functions:
+Resources Refered: https://www.datamentor.io/r-programming/function/, https://swcarpentry.github.io/r-novice-inflammation/02-func-R/
+
+
+```{r Power Function}
+
+pow <- function(x, y) {
+# function to print x raised to the power y
+  result <- x^y
+  print(paste(x,"raised to the power", y, "is", result))
+}
+
+pow(8, 2)
+
+```
+
+
+```{r Default Value Power Function}
+
+pow <- function(x, y = 2) {
+  # function to print x raised to the power y
+  result <- x^y
+  print(paste(x,"raised to the power", y, "is", result))
+}
+
+pow(2)
+```
+
+```{r Sum Function}
+
+input_1 <- 20
+mySum <- function(input_1, input_2 = 10) {
+  output <- input_1 + input_2
+  return(output)
+}
+
+mySum(2)
+
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
